@@ -16,10 +16,7 @@
 		}
 	],
 	"autoload": {
-		"psr-4": { "yii\\composer\\": "" }
-	},
-	"extra": {
-		"class": "yii\\composer\\Plugin"
+		"psr-4": { "innovotel\\": "" }
 	},
 	"require": {
 		"composer-plugin-api": "1.0.0",
