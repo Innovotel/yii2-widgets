@@ -1,5 +1,5 @@
 {
-	"name": "innovotel/widgets",
+	"name": "innovotel/yii2-widgets",
 	"description": "Widgets common to Innovotel projects",
 	"keywords": ["yii2", "widgets"],
 	"type": "yii2-extension",
@@ -23,8 +23,8 @@
 	},
 	"require": {
 		"composer-plugin-api": "1.0.0",
-        "innovotel/helpers": "*",
-        "kartik-v/grid": "*",
-        "kartik-v/icons": "*"
+        "innovotel/yii2-helpers": "*",
+        "kartik-v/yii2-grid": "*",
+        "kartik-v/yii2-icons": "*"
 	}
 }
