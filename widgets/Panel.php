@@ -12,11 +12,11 @@
  */
 
 
-namespace app\widgets;
+namespace innovotel\widgets;
 
 use yii\base\Widget;
-use app\helpers\Html;
 use yii\bootstrap\Nav;
+use innovotel\helpers\Html;
 
 class Panel extends Widget {
 

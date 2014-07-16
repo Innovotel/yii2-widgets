@@ -12,11 +12,11 @@
  */
 
 
-namespace app\widgets;
+namespace innovotel\widgets;
 
 use yii\base\Widget;
 use app\widgets\DetailView;
-use kartik\helpers\Html;
+use innovotel\helpers\Html;
 use yii\bootstrap\Nav;
 
 class DetailPanel extends Widget {

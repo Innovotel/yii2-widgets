@@ -12,10 +12,10 @@
  */
 
 
-namespace app\widgets;
+namespace innovotel\widgets;
 
 use yii\helpers\ArrayHelper;
-use kartik\helpers\Html;
+use innovotel\helpers\Html;
 
 
 class DetailView extends \yii\widgets\DetailView

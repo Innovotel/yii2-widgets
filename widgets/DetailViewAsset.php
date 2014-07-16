@@ -11,7 +11,7 @@
  * written consent of R. Marc Lewis or Innovotel, LLC.
  */
 
-namespace app\widgets;
+namespace innovotel\widgets;
 
 /**
  * Asset bundle for DetailView Widget
