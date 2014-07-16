@@ -1,0 +1,30 @@
+{
+	"name": "innovotel/widgets",
+	"description": "Widgets common to Innovotel projects",
+	"keywords": ["yii2", "widgets"],
+	"type": "yii2-extension",
+	"license": "Proprietary",
+	"support": {
+		"issues": "http://redmine.innovotel.com/projects/yii2-widgets",
+		"forum": "http://redmine.innovotel.com/projects/yii2-widgets/boards",
+		"wiki": "http://redmine.innovotel.com/projects/yii2-widgets/wiki",
+	},
+	"authors": [
+		{
+			"name": "Marc Lewis",
+			"email": "marc@innovotel.com"
+		}
+	],
+	"autoload": {
+		"psr-4": { "yii\\composer\\": "" }
+	},
+	"extra": {
+		"class": "yii\\composer\\Plugin"
+	},
+	"require": {
+		"composer-plugin-api": "1.0.0",
+        "innovotel/helpers": "*",
+        "kartik-v/grid": "*",
+        "kartik-v/icons": "*"
+	}
+}

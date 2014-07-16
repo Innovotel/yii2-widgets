@@ -1,0 +1,31 @@
+.panel > .detail-view-section, .table-bordered, .table {
+	border-top: 1px solid #dddddd;
+}
+
+h3.detail-view-section-header {
+	padding-top: 20px;
+}
+
+th.detail-view-label {
+	width: 50%;
+}
+
+th.detail-view-label-1 {
+	width: 50%;
+}
+
+th.detail-view-label-2 {
+	width: 20%;
+}
+
+th.detail-view-label-3 {
+	width: 12%;
+}
+
+th.detail-view-label-4 {
+	width: 6%;
+}
+
+.panel-body {
+	border-top: 1px solid #dddddd;
+}
