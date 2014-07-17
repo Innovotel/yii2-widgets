@@ -16,7 +16,7 @@ namespace innovotel\widgets;
  *
  * @author Marc Lewis <marc@innovotel.com>
  */
-class GridViewAsset extends AssetBundle
+class GridViewAsset extends \yii\web\AssetBundle
 {
 
 	public function init()

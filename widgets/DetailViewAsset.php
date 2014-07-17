@@ -18,7 +18,7 @@ namespace innovotel\widgets;
  *
  * @author Marc Lewis <marc@innovotel.com>
  */
-class DetailViewAsset extends AssetBundle
+class DetailViewAsset extends \yii\web\AssetBundle
 {
 
 	public function init()
