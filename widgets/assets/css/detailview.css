@@ -30,6 +30,14 @@ th.detail-view-label-4 {
 	border-top: 1px solid #dddddd;
 }
 
-.panel-nav {
-    display: inline;
+.panel-nav > .navbar-right {
+	margin-right: -15px;
+}
+
+.panel-nav > .nav > li {
+	margin-top: -8px;
+}
+
+.panel-title {
+	display: inline;
 }

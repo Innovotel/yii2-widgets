@@ -24,6 +24,7 @@ class DetailPanel extends Widget {
 	const DETAILVIEW_PREBODY = 0;
 	const DETAILVIEW_POSTBODY = 1;
 
+    public $panelType = 'default';
 	public $heading = '';
 	public $navItems = array();
 	public $navOpts = ['class' => 'navbar-nav navbar-right navbar-nav-small'];
@@ -37,9 +38,28 @@ class DetailPanel extends Widget {
 	public $preBody = '';
 	public $body = '';
 	public $postBody = '';
+    public $postFooter = '';
 	public $detailViewPosition = self::DETAILVIEW_PREBODY;
 
-	public function init()
+    public $bodyTemplate = '<div class="panel-body">{body}</div>';
+    public $footerTemplate = '<div class="panel-footer">{footer}</div>';
+
+    const PANEL_TEMPLATE = <<< HTML
+<div class="panel panel-{type}">
+	<div class="panel-heading">
+	    <div class="panel-nav">{nav}</div>
+		<div class="panel-title"><h3 class="panel-title" style="display: inline">{heading}</h3></div>
+	</div>
+	{preBody}
+	{body}
+	{postBody}
+	{footer}
+	{postFooter}
+</div>
+HTML;
+
+
+    public function init()
 	{
 		// FIXME: Put some validation in here
 	}
@@ -48,8 +68,9 @@ class DetailPanel extends Widget {
 	{
 		// Create the panel options
 		$preHeading = '';
+        $nav = '';
 		if (!empty($this->navItems)) {
-			$preHeading = Nav::widget([
+			$nav = Nav::widget([
 				'options' => $this->navOpts,
 				'items' => $this->navItems,
 				'encodeLabels' => false,
@@ -71,9 +92,23 @@ class DetailPanel extends Widget {
 			$this->postBody = $dvdata . $this->postBody;
 		}
 
+        $footer = empty($this->footer) ? '' : strtr($this->footerTemplate, ['{footer}', $this->footer]);
+        $body= empty($this->body) ? '' : strtr($this->bodyTemplate, ['{body}', $this->body]);
+
+        return strtr(self::PANEL_TEMPLATE, [
+                '{type}' => $this->panelType,
+                '{nav}' => $nav,
+                '{heading}' => $this->heading,
+                '{preBody}' => $this->preBody,
+                '{body}' => $body,
+                '{postBody}' => $this->postBody,
+                '{footer}' => $footer,
+                '{postFooter}' => $this->postFooter,
+            ]);
+
 		// Render the panel
 		return Html::panel([
-			'heading' => '<h3 class="panel-title">' . $this->heading . '</h3>',
+			'heading' => '<div class="panel-nav">' . $nav . '</div><div class="panel-title"><h3 class="panel-title">' . $this->heading . '</h3></div>',
 			'preHeading' => $preHeading,
 			'preBody' => $this->preBody,
 			'postBody' => $this->postBody,
