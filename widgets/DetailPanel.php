@@ -15,7 +15,7 @@
 namespace innovotel\widgets;
 
 use yii\base\Widget;
-use app\widgets\DetailView;
+use innovotel\widgets\DetailView;
 use innovotel\helpers\Html;
 use yii\bootstrap\Nav;
 
