@@ -29,3 +29,7 @@ th.detail-view-label-4 {
 .panel-body {
 	border-top: 1px solid #dddddd;
 }
+
+.panel-nav {
+    display: inline;
+}

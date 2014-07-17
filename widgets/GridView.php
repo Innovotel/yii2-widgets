@@ -25,7 +25,7 @@ class GridView extends \kartik\grid\GridView
 
 
 	const CS_TEMPLATE = <<< HTML
-<div class="panel {type}">{nav}
+<div class="panel {type}"><div class="panel-nav">{nav}</div>
 	<div class="panel-heading">
 		<h3 class="panel-title">{heading}</h3>
 	</div>
@@ -42,6 +42,11 @@ class GridView extends \kartik\grid\GridView
 </div>
 HTML;
 
+    public function init()
+    {
+        parent::init();
+        GridViewAsset::register($this->getView());
+    }
 
 	protected function renderPanel()
 	{
