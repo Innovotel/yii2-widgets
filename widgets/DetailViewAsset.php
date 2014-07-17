@@ -28,4 +28,24 @@ class DetailViewAsset extends \yii\web\AssetBundle
 		//$this->setupAssets('js', ['js/sidenav']);
 		parent::init();
 	}
+
+    protected function setupAssets($type, $files = [])
+    {
+        $srcFiles = [];
+        $minFiles = [];
+        foreach ($files as $file) {
+            $srcFiles[] = "{$file}.{$type}";
+            $minFiles[] = "{$file}.min.{$type}";
+        }
+        if (empty($this->$type)) {
+            $this->$type = YII_DEBUG ? $srcFiles : $minFiles;
+        }
+    }
+
+    protected function setSourcePath($path)
+    {
+        if (empty($this->sourcePath)) {
+            $this->sourcePath = $path;
+        }
+    }
 }
