@@ -25,9 +25,10 @@ class GridView extends \kartik\grid\GridView
 
 
 	const CS_TEMPLATE = <<< HTML
-<div class="panel {type}"><div class="panel-nav">{nav}</div>
+<div class="panel {type}">
 	<div class="panel-heading">
-		<h3 class="panel-title">{heading}</h3>
+	    <div class="panel-nav">{nav}</div>
+		<div class="panel-title"><h3 class="panel-title">{heading}</h3></div>
 	</div>
 	{before}
 	{items}

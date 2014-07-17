@@ -1,3 +1,10 @@
-.panel-nav {
-    display: inline;
+.panel-nav > .navbar-right {
+	margin-right: -15px;
+}
+
+.panel-nav > .nav > li {
+	margin-top: -8px;
+}
+.panel-title {
+	display: inline;
 }
