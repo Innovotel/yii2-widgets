@@ -19,6 +19,7 @@ class GridView extends \kartik\grid\GridView
 	public $condensed = true;
 	public $hover = true;
 	public $floatHeader = true;
+	public $export = false;
 
 	public $panelHeadingTemplate = <<< HTML
 	    <div class="panel-nav">{nav}</div>
