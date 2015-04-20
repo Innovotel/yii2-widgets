@@ -92,8 +92,8 @@ HTML;
 			$this->postBody = $dvdata . $this->postBody;
 		}
 
-        $footer = empty($this->footer) ? '' : strtr($this->footerTemplate, ['{footer}', $this->footer]);
-        $body= empty($this->body) ? '' : strtr($this->bodyTemplate, ['{body}', $this->body]);
+        $footer = empty($this->footer) ? '' : preg_replace('/{footer}/', $this->footer, $this->footerTemplate);
+        $body = empty($this->body) ? '' : preg_replace('/{body}/', $this->body, $this->bodyTemplate);
 
         return strtr(self::PANEL_TEMPLATE, [
                 '{type}' => $this->panelType,
