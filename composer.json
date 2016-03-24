@@ -3,11 +3,10 @@
 	"description": "Widgets common to Innovotel projects",
 	"keywords": ["yii2", "widgets"],
 	"type": "yii2-extension",
-	"license": "Proprietary",
+	"license": "MIT",
 	"support": {
-		"issues": "http://redmine.innovotel.com/projects/yii2-widgets",
-		"forum": "http://redmine.innovotel.com/projects/yii2-widgets/boards",
-		"wiki": "http://redmine.innovotel.com/projects/yii2-widgets/wiki"
+		"issues": "https://github.com/Innovotel/yii2-widgets/issues",
+		"wiki": "https://github.com/Innovotel/yii2-widgets/wiki"
 	},
 	"authors": [
 		{
@@ -20,8 +19,8 @@
 	},
 	"require": {
 		"composer-plugin-api": "1.0.0",
-        "innovotel/yii2-helpers": "*",
-        "kartik-v/yii2-grid": "*",
-        "kartik-v/yii2-icons": "*"
+		"innovotel/yii2-helpers": "*",
+		"kartik-v/yii2-grid": "*",
+		"kartik-v/yii2-icons": "*"
 	}
 }
