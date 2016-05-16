@@ -18,7 +18,6 @@
 		"psr-4": { "innovotel\\": "" }
 	},
 	"require": {
-		"composer-plugin-api": "1.0.0",
 		"innovotel/yii2-helpers": "*",
 		"kartik-v/yii2-grid": "*",
 		"kartik-v/yii2-icons": "*"
