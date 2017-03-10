@@ -18,7 +18,7 @@ class GridView extends \kartik\grid\GridView
 	// Change a few defaults from kartik's gridview
 	public $condensed = true;
 	public $hover = true;
-	public $floatHeader = true;
+	public $floatHeader = false;
 	public $export = false;
 
 	public $panelHeadingTemplate = <<< HTML
