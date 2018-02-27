@@ -11,7 +11,7 @@ use yii\helpers\Url;
 use innovotel\helpers\Html;
 
 
-class GridView extends \kartik\grid\GridView implements FilterStateInterface
+class LteGridView extends \kartik\grid\GridView implements FilterStateInterface
 {
     use FilterStateTrait;
     
@@ -23,11 +23,14 @@ class GridView extends \kartik\grid\GridView implements FilterStateInterface
 	public $floatHeader = false;
 	public $export = false;
     
+    // Use AdminLTE styles instead of bootstrap
+    public $panelPrefix = 'box box-';
+	
 	public $saveFilters = true;
 
 	public $panelHeadingTemplate = <<< HTML
-<div class="panel-nav">{nav}</div>
-<div class="panel-title"><h3 class="panel-title">{heading}</h3></div>
+<div class="box-tools pull-right">{nav}</div>
+<h3 class="box-title">{heading}</h3>
 HTML;
 
 	public $panelFooterTemplate = <<< HTML
@@ -88,12 +91,12 @@ HTML;
         $panelFooter = '';
         
         if ($heading !== false) {
-            static::initCss($headingOptions, 'panel-heading');
+            static::initCss($headingOptions, 'box-header');
             $content = strtr($this->panelHeadingTemplate, ['{heading}' => $heading]);
             $panelHeading = Html::tag('div', $content, $headingOptions);
         }
         if ($footer !== false) {
-            static::initCss($footerOptions, 'panel-footer');
+            static::initCss($footerOptions, 'box-footer');
             $content = strtr($this->panelFooterTemplate, ['{footer}' => $footer]);
             $panelFooter = Html::tag('div', $content, $footerOptions);
         }

@@ -19,7 +19,7 @@ use innovotel\widgets\DetailView;
 use innovotel\helpers\Html;
 use yii\bootstrap\Nav;
 
-class DetailPanel extends Widget {
+class LteDetailPanel extends Widget {
 
 	const DETAILVIEW_PREBODY = 0;
 	const DETAILVIEW_POSTBODY = 1;
@@ -41,14 +41,14 @@ class DetailPanel extends Widget {
     public $postFooter = '';
 	public $detailViewPosition = self::DETAILVIEW_PREBODY;
 
-    public $bodyTemplate = '<div class="panel-body">{body}</div>';
-    public $footerTemplate = '<div class="panel-footer">{footer}</div>';
+    public $bodyTemplate = '<div class="box-body">{body}</div>';
+    public $footerTemplate = '<div class="box-footer">{footer}</div>';
 
     const PANEL_TEMPLATE = <<< HTML
-<div class="panel panel-{type}">
-	<div class="panel-heading">
-	    <div class="panel-nav">{nav}</div>
-		<div class="panel-title"><h3 class="panel-title" style="display: inline;">{heading}</h3></div>
+<div class="box box-{type}">
+	<div class="box-header">
+	    <div class="box-tools pull-right">{nav}</div>
+		<h3 class="box-title">{heading}</h3>
 	</div>
 	{preBody}
 	{body}
@@ -70,10 +70,10 @@ HTML;
 		$preHeading = '';
         $nav = '';
 		if (!empty($this->navItems)) {
-			$nav = Nav::widget([
-				'options' => $this->navOpts,
+			$nav = BoxTools::widget([
+				//'options' => $this->navOpts,
 				'items' => $this->navItems,
-				'encodeLabels' => false,
+				//'encodeLabels' => false,
 			]);
 		}
 
@@ -108,7 +108,7 @@ HTML;
 
 		// Render the panel
 		return Html::panel([
-			'heading' => '<div class="panel-nav">' . $nav . '</div><h3 class="panel-title">' . $this->heading . '</h3></div>',
+			'heading' => '<div class="box-tools pull-right">' . $nav . '</div><h3 class="box-title">' . $this->heading . '</h3></div>',
 			'preHeading' => $preHeading,
 			'preBody' => $this->preBody,
 			'postBody' => $this->postBody,
