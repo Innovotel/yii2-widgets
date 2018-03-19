@@ -58,11 +58,6 @@ class BoxTools extends Widget
         if (isset($item['label'])) {
             $label .= $item['label'];
         }
-        
-        $class = 'boxnavitem';
-        if (isset($item['class'])) {
-            $class .= ' ' . $item['class'];
-        }
 
         if (!empty($item['items'])) {
             return ButtonDropdown::widget([
@@ -75,7 +70,7 @@ class BoxTools extends Widget
         } else {
             $url = empty($item['url']) ? ['#'] : $item['url'];
             $options = empty($item['options']) ? [] : $item['options'];
-            return Html::tag('span', Html::a($label, $url, $options), $class);
+            return Html::tag('span', Html::a($label, $url, $options), ['class' => 'boxnavitem']);
         }
     }
 }
