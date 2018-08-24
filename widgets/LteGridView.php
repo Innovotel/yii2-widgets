@@ -71,7 +71,7 @@ HTML;
     /**
      * Sets the grid panel layout based on the [[template]] and [[panel]] settings.
      */
-    protected function renderPanel()
+    protected function renderPanelBad()
     {
         if (!$this->bootstrap || !is_array($this->panel) || empty($this->panel)) {
             return;
