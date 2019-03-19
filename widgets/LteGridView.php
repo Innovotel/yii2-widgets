@@ -46,11 +46,13 @@ HTML;
 		parent::init();
 
 		$nav = ArrayHelper::getValue($this->panel, 'nav', '');
+		$heading = ArrayHelper::getValue($this->panel, 'heading', '');
 
 		$this->panelHeadingTemplate = strtr(
 			$this->panelHeadingTemplate,
 			[
 				'{nav}' => $nav,
+                '{heading}' => $heading,
 			]
 		);
 
